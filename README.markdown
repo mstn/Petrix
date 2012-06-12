@@ -2,11 +2,13 @@
 
 Petrix is a Javascript framework to build Petri Nets. If you don't know what Petri Nets are, Wikipedia has a beautiful [http://en.wikipedia.org/wiki/Petri_net](entry) for this topic.
 The kind of Petri Nets you can build with Petrix are just a particular case of Petri Nets where places can store only one token at the time and communication is synchronous, that is, a global clock synchronizes every firing.
+
 I implemented the code because I was curious to understand dataflow networks where nodes have a state and are not just "functionals" as in Kahn networks. The simplest case of stateful nodes is represented by Petri nets where the state of a place can be on (full) or off (empty) depending on the past interactions with the enviroment. In addition it turned out that this kind of networks can be modelled easily using Interaction Categories.
+
 Interaction categories are a formal tool to define dynamical processes. You can find more about Interaction categories in the bibliography below. [1] is the seminal paper while [2] describes an application of the framework to dataflows. 
 Following the interaction category paradigm, a Petri Net is a process of kind A->B, or equivalentely a subset of AxB where A and B are sets of symbols. In other words, we can represent Petri Nets as matrices (hence the name Petrix as a shorthand for Petri + matrix). Note that the matricial representation of Petri Nets is not the same as the standard one (see Wikipedia article above). In fact, the standard use of matrices captures the static structure of Petri Nets while matrices in Petrix representes the dynamical behavior of Petri Nets.
 
-[1] introduces Interaction Categories; the framework is a bit more general than that presented here. The idea of rapresenting processes as matrices is already present in this paper and in the motto "processes are relations extended in time". However, my source of inspiration was [4] where circuit composition is defined in terms of matricial operations.
+[1] introduces Interaction Categories; the framework is a bit more general than that presented here. The idea of rapresenting processes as matrices is already present in this paper and in Abramsky's motto "processes are relations extended in time". However, my source of inspiration was [4] where circuit composition is defined in terms of matricial operations.
 [2] defines a denotational semantics for dataflow networks in terms of Interaction Categories and proves that this semantic is equivalent to traditional Kahn semantics for dataflows when networks are deadlock-free.
 [3] introduces a simplified notation for Petri nets where places have only one input and one output and transitions are not represented by node, but by multi-edges. Petrix defines Petri nets in this way.
 
