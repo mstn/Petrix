@@ -1,6 +1,6 @@
 ## What is Petrix?
 
-Petrix is a Javascript framework to build Petri Nets. If you don't know what Petri Nets are, Wikipedia has a beautiful [http://en.wikipedia.org/wiki/Petri_net](entry) for this topic.
+Petrix is a Javascript framework to build Petri Nets. If you don't know what Petri Nets are, Wikipedia has a beautiful [entry](http://en.wikipedia.org/wiki/Petri_net) for this topic.
 The kind of Petri Nets you can build with Petrix are just a particular case of Petri Nets where places can store only one token at the time and communication is synchronous, that is, a global clock synchronizes every firing.
 
 I implemented the code because I was curious to understand dataflow networks where nodes have a state and are not just "functionals" as in Kahn networks. The simplest case of stateful nodes is represented by Petri nets where the state of a place can be on (full) or off (empty) depending on the past interactions with the enviroment. In addition it turned out that this kind of networks can be modelled easily using Interaction Categories.
